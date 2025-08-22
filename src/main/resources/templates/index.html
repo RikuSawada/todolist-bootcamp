@@ -6,8 +6,21 @@
 </head>
 <body>
     <h1>Welcome to Todolist</h1>
-    <ul>
-        <li th:each="todo : ${todos}" th:text="${todo.title}"></li>
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Assignee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="todo : ${todos}">
+                <td th:text="${todo.title}"></td>
+                <td th:text="${todo.date} ?: ''"></td>
+                <td th:text="${todo.assignee} ?: ''"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
