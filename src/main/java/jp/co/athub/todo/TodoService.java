@@ -1,16 +1,19 @@
 package jp.co.athub.todo;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class TodoService {
+
+    private final TodoMapper todoMapper;
+
+    public TodoService(TodoMapper todoMapper) {
+        this.todoMapper = todoMapper;
+    }
+
     public List<Todo> findAll() {
-        return List.of(
-            new Todo(1L, "Sample Todo 1"),
-            new Todo(2L, "Sample Todo 2")
-        );
+        return todoMapper.findAll();
     }
 }

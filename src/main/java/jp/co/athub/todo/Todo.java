@@ -1,13 +1,20 @@
 package jp.co.athub.todo;
 
-import java.time.LocalDate;
-
 public class Todo {
-    private final Long id;
-    private final String title;
+    private Long id;
+
+    private String title;
+
+    public Todo() {
+        // default constructor
+    }
 
     public Todo(Long id, String title) {
         this.id = id;
+        this.title = title;
+    }
+
+    public Todo(String title) {
         this.title = title;
     }
 
@@ -15,7 +22,15 @@ public class Todo {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
