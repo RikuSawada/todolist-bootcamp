@@ -1,4 +1,4 @@
-package com.example.demo;
+package jp.co.athub.todo;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class TodoService {
     public List<Todo> findAll() {
         return List.of(
-            new Todo(1L, "Sample Todo 1", LocalDate.now(), "Alice"),
+            new Todo(1L, "Sample Todo 1"),
             new Todo(2L, "Sample Todo 2")
         );
     }
