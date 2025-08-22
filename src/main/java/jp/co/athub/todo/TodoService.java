@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 public class TodoService {
     public List<Todo> findAll() {
         return List.of(
-            new Todo(1L, "Sample Todo 1"),
-            new Todo(2L, "Sample Todo 2")
+            new Todo(1L, "Sample Todo 1", "2025/08/21","`石破茂"),
+            new Todo(2L, "Sample Todo 2", "2025/08/22","`小泉進次郎")
         );
     }
 }
