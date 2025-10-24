@@ -18,7 +18,7 @@
         <tbody>
             <tr th:each="todo : ${todos}">
                 <td th:text="${todo.title}"></td>
-                <td th:text="${todo.day}"></td>
+                <td th:text="${#dates.format(todo.day, 'yyyy/MM/dd HH:mm:ss')}"></td>
                 <td th:text="${todo.name}"></td>
             </tr>
         </tbody>
