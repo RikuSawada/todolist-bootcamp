@@ -30,3 +30,5 @@ out/
 
 # Editor
 .idea/
+
+.DS_Store
